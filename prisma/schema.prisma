@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum StatusGeral {
+  ATIVO
+  INATIVO
+}
+
+model Estado {
+  id        String   @id @default(uuid())
+  descricao String
+  uf        String   @db.VarChar(2)
+  cidades   Cidade[] 
+}
+
+model Cidade {
+  id        String     @id @default(uuid())
+  descricao String
+  estadoId  String
+  estado    Estado     @relation(fields: [estadoId], references: [id])
+  enderecos Endereco[]
+}
+
+model Endereco {
+  id          String   @id @default(uuid())
+  logradouro  String
+  numero      Int
+  cep         String   
+  bairro      String
+  complemento String
+  cidadeId    String
+  cidade      Cidade   @relation(fields: [cidadeId], references: [id])
+  
+  hospede     Hospede? 
+}
+
+model Hospede {
+  id             String    @id @default(uuid())
+  nome           String
+  cpf            String    @unique 
+  dataNascimento DateTime
+  telefone       String
+  email          String    @unique
+  status         StatusGeral @default(ATIVO)
+  
+  enderecoId     String    @unique
+  endereco       Endereco  @relation(fields: [enderecoId], references: [id])
+  
+}
+
+model Operacao {
+  id        String         @id @default(uuid())
+  descricao String         @unique
+  logs      LogAuditoria[] 
+}
+
+model LogAuditoria {
+  id                 String   @id @default(uuid())
+  dataHora           DateTime @default(now())
+  usuarioResponsavel String
+  
+  operacaoId         String
+  operacao           Operacao @relation(fields: [operacaoId], references: [id])
+
+  entidadeAfetada    String   
+  registroId         String   
+}
