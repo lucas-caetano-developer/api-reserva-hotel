@@ -301,7 +301,7 @@ export class HospedeDAO implements IDAO {
 ## 1. Clone este repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/lucas-caetano-developer/api-reserva-hotel.git
 ```
 
 ---
@@ -324,11 +324,13 @@ DATABASE_URL="postgresql://usuario:senha@localhost:5432/hotel_db?schema=public"
 
 ---
 
-## 4. Execute as migrations
+## 4. Gere as tabelas no banco de dados
 
 ```bash
-npx prisma migrate dev
+npx prisma db push
 ```
+
+(Nota: Se preferir gerar uma migration local na sua máquina, você pode usar npx prisma migrate dev --name init).
 
 ---
 
