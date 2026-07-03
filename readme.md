@@ -11,7 +11,7 @@ O principal diferencial deste projeto é sua arquitetura baseada em **Programaç
 # Índice
 
 - [Arquitetura, POO e Padrões de Projeto](#arquitetura-poo-e-padrões-de-projeto-aplicados)
-- [Diagrama de Iplementação](#diagrama-de-implementação)
+- [Diagrama de Implementação](#diagrama-de-implementação)
 - [Fluxo da Aplicação](#o-fluxo-da-aplicação-na-prática)
 - [Diagrama de Sequência](#diagrama-de-sequência)
 - [Como executar](#como-executar-o-projeto-localmente)
