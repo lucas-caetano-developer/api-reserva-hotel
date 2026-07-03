@@ -116,10 +116,10 @@ Caso seja necessário trocar o ORM futuramente, apenas o DAO precisará ser alte
 
 ---
 
-# Diagrama de Classes
+# Diagrama de Implementação
 
 <p align="center">
-  <img src="docs/diagrama-implementacao.png" alt="Diagrama de Classes" width="900">
+  <img src="docs/diagrama-implementacao.png" alt="Diagrama de Implementação" width="900">
 </p>
 
 ---
