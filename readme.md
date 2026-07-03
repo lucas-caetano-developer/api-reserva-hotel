@@ -119,7 +119,7 @@ Caso seja necessário trocar o ORM futuramente, apenas o DAO precisará ser alte
 # Diagrama de Implementação
 
 <p align="center">
-  <img src="docs/diagrama-implementacao.png" alt="Diagrama de Implementação" width="900">
+  <img src="docs/diagrama-implementacao.png" alt="Diagrama de Implementação." width="900">
 </p>
 
 ---
@@ -284,7 +284,7 @@ export class HospedeDAO implements IDAO {
 # Diagrama de Sequência
 
 <p align="center">
-  <img src="docs/diagrama-sequencia.png" alt="Diagrama de Sequência" width="900">
+  <img src="docs/diagrama-sequencia.png" alt="Diagrama de Sequência." width="900">
 </p>
 
 ---
